@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20140505034327) do
     t.string   "password"
     t.string   "password_confirm"
     t.boolean  "is_admin"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -60,5 +61,6 @@ ActiveRecord::Schema.define(version: 20140505034327) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

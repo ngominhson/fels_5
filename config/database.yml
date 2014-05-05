@@ -7,20 +7,20 @@ development:
   adapter: mysql2 
   encoding: utf8
   reconnect: false
-  database: MMS
+  database: Fels5
   pool: 5
   username: root
-  password: "buongnhj"
+  password: "123456"
   socket: /var/run/mysqld/mysqld.sock
 
 test:
   adapter: mysql2 
   encoding: utf8
   reconnect: false
-  database: MMS_test
+  database: Fels5_test
   pool: 5
   username: root
-  password: "buongnhj"
+  password: "123456"
   socket: /var/run/mysqld/mysqld.sock
 
 production:
