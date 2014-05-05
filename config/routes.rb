@@ -1,6 +1,9 @@
 Fels5::Application.routes.draw do
   resources :users
-  resources :categories
+  resources :words
+  resources :categories do
+  	resources "words", only: :index
+  end
   resources :sessions, only: [:new, :create, :destroy]
   root "static_pages#home"
   match "/help", to: "static_pages#help", via: "get"

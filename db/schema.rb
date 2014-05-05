@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140505063128) do
   create_table "words", force: true do |t|
     t.string   "name"
     t.string   "description"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

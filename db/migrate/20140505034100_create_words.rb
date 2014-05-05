@@ -3,6 +3,7 @@ class CreateWords < ActiveRecord::Migration
     create_table :words do |t|
       t.string :name
       t.string :description
+      t.integer :category_id
 
       t.timestamps
     end
