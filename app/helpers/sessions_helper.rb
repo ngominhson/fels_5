@@ -29,6 +29,10 @@ module SessionsHelper
     @current_user = User.find_by(remember_token: remember_token)
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
   def sign_out
     current_user.not_validate_password = true
     current_user.update_attributes(remember_token: User.digest(User.new_remember_token))
