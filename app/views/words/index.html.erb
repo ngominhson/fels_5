@@ -1,0 +1,15 @@
+<% provide(:title, 'All words') %>
+<h1>All Words</h1>
+<%= will_paginate %>	
+
+<ul class="words">
+  <% @words.each do |word| %>
+    <li>
+      <%= link_to word.name, word %>
+      <%= word.description%>
+    </li>
+
+  <% end %>
+</ul>
+
+<%= will_paginate %>	
