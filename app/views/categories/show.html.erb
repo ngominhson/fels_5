@@ -1,0 +1,19 @@
+<% provide(:title, @category.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @category.name %> 
+      </h1>
+    </section>
+  </aside>
+  <div class="span8">
+    <% if @category.words.any? %>
+      <h3>words (<%= @category.words.count %>)</h3>
+      <ol class="words">
+        <%= render @words	%>
+      </ol>
+      <%= will_paginate @words %>
+    <% end %>
+  </div>
+</div>
