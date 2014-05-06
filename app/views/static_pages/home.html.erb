@@ -1,7 +1,22 @@
-<div class="center hero-unit">
-  <h1>Welcome to the E Learning App</h1>
-  <h2>
-    This  is the home page
-  </h2>   
-  <%= link_to "Sign up now!", new_user_path, class: "btn btn-large btn-primary"%>
-</div>
+<% if signed_in?%>
+  <div class="row">
+    <aside class="span4">
+      <session>
+        <%= render 'shared/user_info' %>
+      </session>
+    </aside>
+
+    <div class="span8">
+      <%= link_to "Words", words_path, class: "btn btn-large btn-primary"%>
+      <%= link_to "Lesson", categories_path, class: "btn btn-large btn-primary"%>
+    </div>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to the E Learning App</h1>
+    <h2>
+      This  is the home page
+    </h2>   
+    <%= link_to "Sign up now!", new_user_path, class: "btn btn-large btn-primary"%>
+  </div>
+<% end %>

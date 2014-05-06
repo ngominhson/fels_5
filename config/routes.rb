@@ -1,6 +1,9 @@
 Fels5::Application.routes.draw do
   resources :users
   resources :words
+  resources :lessons do
+    resources :results
+  end
   resources :categories do
   	resources "words", only: :index
   end
