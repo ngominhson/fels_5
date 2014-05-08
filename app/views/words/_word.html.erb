@@ -1,3 +1,7 @@
 <li>
   <span class="name"><%= word.name %></span>
+  <span class="name"><%= word.description %></span>
+  <%= link_to "edit", "#"%>
+  <%= link_to "delete", word, method: :delete,
+                                  data: { confirm: "You sure?" } %>
 </li>

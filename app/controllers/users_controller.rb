@@ -23,6 +23,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def import
+   Users.import(params[:file])
+  end
+
   def index
     @users = User.paginate page: params[:page]
   end

@@ -1,0 +1,6 @@
+<%= form_for(@word) do |f| %>
+  <div class="field">
+    <%= f.text_area :description%>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
