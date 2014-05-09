@@ -13,7 +13,7 @@
       <h3>words (<%= @category.words.count %>)</h3>
       <%= link_to "Make new words", "#" %>
       <ol class="words">
-        <%= render @words	%>
+        <%= render @words %>
       </ol>
       <%= will_paginate @words %>
     <% end %>
