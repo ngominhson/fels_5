@@ -8,6 +8,10 @@ class LessonsController < ApplicationController
   def new
     @lesson = Lesson.new(category_id: params[:category_id], result: nil, user_id: current_user.id)
     if @lesson.save
+      words = Word.generate_random_word @lesson.category_id
+      words.each do |word|
+        LessonWord.create(lesson_id: @lesson.id, word_id: word.id)
+      end
       redirect_to new_lesson_result_path(lesson_id: @lesson.id)
     end
   end
