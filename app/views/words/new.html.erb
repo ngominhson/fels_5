@@ -1,0 +1,17 @@
+<% provide(:title, 'new Word') %>
+<h1>Make new Word </h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@word) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit "Create Word", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
