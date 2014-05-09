@@ -1,0 +1,15 @@
+<% provide(:title, 'All options') %>
+<h1>All Options</h1>
+<%= will_paginate %>	
+
+<ul class="options">
+  <% @options.each do |option| %>
+    <li>
+      <%= option.answer %>
+      <%= option.word_id %>
+    </li>
+
+  <% end %>
+</ul>
+
+<%= will_paginate %>	

@@ -8,6 +8,7 @@
     </section>
   </aside>
   <div class="span8">
+    <%= render 'shared/word_form' %>
     <% if @category.words.any? %>
       <h3>words (<%= @category.words.count %>)</h3>
       <%= link_to "Make new words", "#" %>

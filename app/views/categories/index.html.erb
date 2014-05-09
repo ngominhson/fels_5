@@ -6,12 +6,12 @@
 <ul class="categories">
   <% @categories.each do |category| %>
     <li>
-      <%= link_to category.name, category %>
+      <%= category.name %>
       <%= category.content%>
     </li>
      <%= link_to "Start", new_lesson_path(category_id: category.id),class: "btn btn-large btn-primary" %>
-
   <% end %>
 </ul>
 
 <%= will_paginate %>  
+

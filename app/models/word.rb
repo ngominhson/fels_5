@@ -7,5 +7,7 @@ class Word < ActiveRecord::Base
 
   scope :generate_random_word, ->(category_id) do
     where(category_id: category_id).order("rand()").first
-  end 
+  end
+   
+  accepts_nested_attributes_for :options
 end
