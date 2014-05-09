@@ -19,7 +19,5 @@ Fels5::Application.routes.draw do
     match "/signout", to: "sessions#destroy", via: "delete"
     resources "sessions", only: [:new, :create, :destroy]
     resources "users"
-    resources "words"
-    resources "categories"
   end
 end

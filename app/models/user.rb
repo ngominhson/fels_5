@@ -16,12 +16,6 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
-  def self.import(file)
-    TSV.foreach(file.path, headers: true) do |row|
-      Users.create! row.to_hash
-    end
-  end
-
   private
 
     def create_remember_token
