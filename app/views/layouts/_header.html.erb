@@ -7,6 +7,7 @@
           <li><%= link_to "Home", root_path %></li>
           <% if signed_in? %>
             <% if admin_user? current_user %>
+              <li><%= link_to "CSV", admin_csvs_path %></li>
               <li><%= link_to "Admin", admin_users_path %></li>
             <% end %>
             <li id="fat-menu" class="dropdown">
